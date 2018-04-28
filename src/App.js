@@ -6,6 +6,8 @@ import { Header } from './components/Header';
 
 import { TodoCreate } from './components/TodoCreate';
 
+import { TodoList } from './components/TodoList';
+
 class App extends Component {
   render() {
     return (
@@ -14,6 +16,7 @@ class App extends Component {
 
       <Header/>
       <TodoCreate/>
+      <TodoList/>
       </div>
     );
   }

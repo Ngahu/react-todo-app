@@ -4,25 +4,31 @@ import PropTypes from 'prop-types';
 export class TodoCreate extends Component {
     constructor(props) {
         super(props);
+        
+    this.state = {
+        inputValue:""
+    }
 
     }
 
-    componentWillMount() {
+    handleChange = (evt) =>{
+        console.log(evt.target.value)
+        this.setState({inputValue:evt.target.value})
 
     }
 
-    componentDidMount() {
 
-    }
-
- 
-    
 
     render() {
         return (
             <div>
-                <input type="text" value="" onChange={this.handleChange} />
-                <button onClick={() => this.addTodo(this.state.value)}>Submit</button>
+                <input 
+                onChange={(evt) => this.handleChange(evt)}
+                type="text"
+                 value={this.state.inputValue}
+                 
+                 />
+
             </div>
         );
     }
