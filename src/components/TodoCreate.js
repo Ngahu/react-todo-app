@@ -15,12 +15,14 @@ export class TodoCreate extends Component {
     render() {
         return (
             <div>
-                <input 
+               <form onSubmit={(evt) =>this.props.handleSubmit(evt)}>
+               <input 
                 onChange={(evt) => this.props.handleChange(evt)}
                 type="text"
                  value={this.props.inputValue}
                  
                  />
+               </form>
 
             </div>
         );
