@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
 
-import { Task } from './Task';
 
-export class TodoList extends Component {
+export class Task extends Component {
     constructor(props) {
         super(props);
-    
-    this.state = {
 
     }
 
-    }
 
 
     render() {
         return (
             <div>
-                
-
-                <Task/>
+                task component
             </div>
         );
     }
 }
+
