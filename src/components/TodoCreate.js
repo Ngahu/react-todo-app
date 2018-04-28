@@ -5,17 +5,10 @@ export class TodoCreate extends Component {
     constructor(props) {
         super(props);
         
-    this.state = {
-        inputValue:""
-    }
 
     }
 
-    handleChange = (evt) =>{
-        console.log(evt.target.value)
-        this.setState({inputValue:evt.target.value})
-
-    }
+    
 
 
 
@@ -23,9 +16,9 @@ export class TodoCreate extends Component {
         return (
             <div>
                 <input 
-                onChange={(evt) => this.handleChange(evt)}
+                onChange={(evt) => this.props.handleChange(evt)}
                 type="text"
-                 value={this.state.inputValue}
+                 value={this.props.inputValue}
                  
                  />
 
