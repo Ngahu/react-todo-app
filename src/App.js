@@ -41,13 +41,19 @@ class App extends Component {
       inputValue:''
     })
   }
+
+  handleClick = (index) =>{
+    console.log(index)
+    const todos = this.state.todos;
+    todos[index].done = !todos[index].done;
+    this.setState({ todos });
+  }
   
 
 
 
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
       
@@ -61,6 +67,7 @@ class App extends Component {
 
       <TodoList
       todos={this.state.todos}
+      handleClick = {this.handleClick}
       
       />
       </div>

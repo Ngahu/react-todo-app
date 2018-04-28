@@ -15,7 +15,12 @@ export class TodoList extends Component {
             <div>
                 {this.props.todos.map( (todo, index) => {
                     return(
-                        <Task key={index} todo={todo}/>
+                        <Task 
+                        handleClick={this.props.handleClick}
+                        key={index} 
+                        index={index}
+                        todo={todo}
+                        />
                     )
                 })}
                 
