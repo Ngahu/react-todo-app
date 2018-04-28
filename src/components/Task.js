@@ -12,7 +12,13 @@ export class Task extends Component {
     render() {
         return (
             <div>
-                task component
+                
+                <span style={{ textDecoration:this.props.todo.done ?'line-through':
+                'none'    
+            }}>
+                {this.props.todo.value}
+                </span>
+                <button> Click </button>
             </div>
         );
     }
