@@ -18,7 +18,7 @@ export class Task extends Component {
             }}>
                 {this.props.todo.value}
                 </span>
-                <button> Click </button>
+                <button> {this.props.todo.done ? 'Undo' :'Complete' } </button>
             </div>
         );
     }
